@@ -43,6 +43,11 @@ struct MainView: View {
         .fullScreenCover(isPresented: $isonboardingShown) {
             OnboardingView()
         }
+        .onAppear {
+            AppDelegate.orientationLock = .portrait
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            UINavigationController.attemptRotationToDeviceOrientation()
+        }
     }
 }
 

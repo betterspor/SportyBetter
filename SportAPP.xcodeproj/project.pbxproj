@@ -28,7 +28,36 @@
 		646730822E4A090600C57573 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646730812E4A090600C57573 /* ProgressViewModel.swift */; };
 		646730842E4A091600C57573 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646730832E4A091600C57573 /* ProgressView.swift */; };
 		6467308B2E4A125C00C57573 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6467308A2E4A125C00C57573 /* Onboarding.swift */; };
+		64E9362D2E55FE51002B1A9E /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = 64E9362C2E55FE51002B1A9E /* FlagsmithClient */; };
+		64E936302E55FE5B002B1A9E /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 64E9362F2E55FE5B002B1A9E /* SdkPushExpress */; };
+		64E9363C2E55FE7B002B1A9E /* notificationsvc.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 64E936352E55FE7B002B1A9E /* notificationsvc.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		64E936442E55FE8A002B1A9E /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 64E936432E55FE8A002B1A9E /* SdkPushExpress */; };
+		64E936482E55FE97002B1A9E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E936462E55FE97002B1A9E /* NotificationService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64E9363A2E55FE7B002B1A9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6467302E2E49F12900C57573 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64E936342E55FE7B002B1A9E;
+			remoteInfo = notificationsvc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		64E936412E55FE7B002B1A9E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				64E9363C2E55FE7B002B1A9E /* notificationsvc.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		646730362E49F12900C57573 /* SportAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +83,11 @@
 		646730812E4A090600C57573 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 		646730832E4A091600C57573 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		6467308A2E4A125C00C57573 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		64E936352E55FE7B002B1A9E /* notificationsvc.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notificationsvc.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E936452E55FE97002B1A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E936462E55FE97002B1A9E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		64E9364A2E55FEA3002B1A9E /* notificationsvc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notificationsvc.entitlements; sourceTree = "<group>"; };
+		64E9364B2E55FEAB002B1A9E /* SportAPP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SportAPP.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +95,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E936302E55FE5B002B1A9E /* SdkPushExpress in Frameworks */,
+				64E9362D2E55FE51002B1A9E /* FlagsmithClient in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64E936322E55FE7B002B1A9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E936442E55FE8A002B1A9E /* SdkPushExpress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				646730572E49F13600C57573 /* SportAPP */,
+				64E936472E55FE97002B1A9E /* notificationsvc */,
+				64E936422E55FE8A002B1A9E /* Frameworks */,
 				646730372E49F12900C57573 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				646730362E49F12900C57573 /* SportAPP.app */,
+				64E936352E55FE7B002B1A9E /* notificationsvc.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +133,7 @@
 		646730572E49F13600C57573 /* SportAPP */ = {
 			isa = PBXGroup;
 			children = (
+				64E9364B2E55FEAB002B1A9E /* SportAPP.entitlements */,
 				646730602E49F14500C57573 /* APP */,
 				6467305F2E49F14000C57573 /* Init */,
 				6467304F2E49F13600C57573 /* Assets.xcassets */,
@@ -200,6 +248,23 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		64E936422E55FE8A002B1A9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64E936472E55FE97002B1A9E /* notificationsvc */ = {
+			isa = PBXGroup;
+			children = (
+				64E9364A2E55FEA3002B1A9E /* notificationsvc.entitlements */,
+				64E936452E55FE97002B1A9E /* Info.plist */,
+				64E936462E55FE97002B1A9E /* NotificationService.swift */,
+			);
+			path = notificationsvc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,17 +275,41 @@
 				646730322E49F12900C57573 /* Sources */,
 				646730332E49F12900C57573 /* Frameworks */,
 				646730342E49F12900C57573 /* Resources */,
+				64E936412E55FE7B002B1A9E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64E9363B2E55FE7B002B1A9E /* PBXTargetDependency */,
+			);
+			name = SportAPP;
+			packageProductDependencies = (
+				64E9362C2E55FE51002B1A9E /* FlagsmithClient */,
+				64E9362F2E55FE5B002B1A9E /* SdkPushExpress */,
+			);
+			productName = SportAPP;
+			productReference = 646730362E49F12900C57573 /* SportAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64E936342E55FE7B002B1A9E /* notificationsvc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64E9363E2E55FE7B002B1A9E /* Build configuration list for PBXNativeTarget "notificationsvc" */;
+			buildPhases = (
+				64E936312E55FE7B002B1A9E /* Sources */,
+				64E936322E55FE7B002B1A9E /* Frameworks */,
+				64E936332E55FE7B002B1A9E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SportAPP;
+			name = notificationsvc;
 			packageProductDependencies = (
+				64E936432E55FE8A002B1A9E /* SdkPushExpress */,
 			);
-			productName = SportAPP;
-			productReference = 646730362E49F12900C57573 /* SportAPP.app */;
-			productType = "com.apple.product-type.application";
+			productName = notificationsvc;
+			productReference = 64E936352E55FE7B002B1A9E /* notificationsvc.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -235,6 +324,9 @@
 					646730352E49F12900C57573 = {
 						CreatedOnToolsVersion = 16.3;
 					};
+					64E936342E55FE7B002B1A9E = {
+						CreatedOnToolsVersion = 16.3;
+					};
 				};
 			};
 			buildConfigurationList = 646730312E49F12900C57573 /* Build configuration list for PBXProject "SportAPP" */;
@@ -246,12 +338,17 @@
 			);
 			mainGroup = 6467302D2E49F12900C57573;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				64E9362B2E55FE51002B1A9E /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
+				64E9362E2E55FE5B002B1A9E /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 646730372E49F12900C57573 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				646730352E49F12900C57573 /* SportAPP */,
+				64E936342E55FE7B002B1A9E /* notificationsvc */,
 			);
 		};
 /* End PBXProject section */
@@ -264,6 +361,13 @@
 				6467305B2E49F13600C57573 /* Assets.xcassets in Resources */,
 				6467305D2E49F13600C57573 /* LaunchScreen.storyboard in Resources */,
 				6467305E2E49F13600C57573 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64E936332E55FE7B002B1A9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +399,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		64E936312E55FE7B002B1A9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64E936482E55FE97002B1A9E /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64E9363B2E55FE7B002B1A9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64E936342E55FE7B002B1A9E /* notificationsvc */;
+			targetProxy = 64E9363A2E55FE7B002B1A9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		646730522E49F13600C57573 /* LaunchScreen.storyboard */ = {
@@ -322,23 +442,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportAPP/SportAPP.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportAPP/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SportyBetter;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs access to your camera so you can save your progress.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sportbetterapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -357,23 +479,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SportAPP/SportAPP.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportAPP/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SportyBetter;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app needs access to your camera so you can save your progress.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sportbetterapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -506,6 +630,62 @@
 			};
 			name = Release;
 		};
+		64E9363F2E55FE7B002B1A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = notificationsvc/notificationsvc.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sportbetterapp.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64E936402E55FE7B002B1A9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = notificationsvc/notificationsvc.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sportbetterapp.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,7 +707,53 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		64E9363E2E55FE7B002B1A9E /* Build configuration list for PBXNativeTarget "notificationsvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E9363F2E55FE7B002B1A9E /* Debug */,
+				64E936402E55FE7B002B1A9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64E9362B2E55FE51002B1A9E /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.1;
+			};
+		};
+		64E9362E2E55FE5B002B1A9E /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pushexpress/pushexpress-swift-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64E9362C2E55FE51002B1A9E /* FlagsmithClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E9362B2E55FE51002B1A9E /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			productName = FlagsmithClient;
+		};
+		64E9362F2E55FE5B002B1A9E /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E9362E2E55FE5B002B1A9E /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+		64E936432E55FE8A002B1A9E /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64E9362E2E55FE5B002B1A9E /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6467302E2E49F12900C57573 /* Project object */;
 }

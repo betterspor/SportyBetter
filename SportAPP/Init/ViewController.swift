@@ -1,36 +1,37 @@
-//
-//  ViewController.swift
-//  SportAPP
-//
-//  Created by D K on 11.08.2025.
-//
-
 import SwiftUI
 
-
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        showGame()
                 
-                func showGame() {
-                    let mainView = MainView()
-                    let hostingController = UIHostingController(rootView: mainView)
-                    
-                    addChild(hostingController)
-                    view.addSubview(hostingController.view)
-                    hostingController.didMove(toParent: self)
-                    
-                    hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-                    NSLayoutConstraint.activate([
-                        hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
-                        hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-                        hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                        hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-                    ])
-                }    }
-
-
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(named: "backColor")
+        backgroundView.frame = view.bounds
+        backgroundView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        view.insertSubview(backgroundView, at: 0)
+    }
+    
+    
+    func openApp() {
+        DispatchQueue.main.async {
+            let view = MainView()
+            let hostingController = UIHostingController(rootView: view)
+            self.setRootViewController(hostingController)
+        }
+    }
+    
+    func openPrivacyPolicy(stringURL: String) {
+        DispatchQueue.main.async {
+            let webView = PrivacyPolicyViewController(url: stringURL)
+            self.setRootViewController(webView)
+        }
+    }
+    
+    func setRootViewController(_ viewController: UIViewController) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.window?.rootViewController = viewController
+        }
+    }
 }
-
